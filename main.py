@@ -11,7 +11,6 @@ from langchain_text_splitters import MarkdownHeaderTextSplitter
 
 MODEL_ALIAS = "rizlum_slm"
 ENDPOINT = "http://localhost:6000/v1"
-NUM_EPOCHS = 1
 MCP_SERVER_NAME = "insurance-evaluator"
 
 mcp_server = FastMCP(MCP_SERVER_NAME)
@@ -91,7 +90,7 @@ def run_design_process(builder, base_count):
     lp = dd.ModelProvider(name="local-provider", endpoint=ENDPOINT, provider_type="openai", api_key="no-key")
     mp = dd.LocalStdioMCPProvider(name=MCP_SERVER_NAME, command=sys.executable, args=[str(Path(__file__).resolve()), "serve"])
     designer = DataDesigner(model_providers=[lp], mcp_providers=[mp])
-    return designer.preview(builder, num_records=base_count * NUM_EPOCHS)
+    return designer.preview(builder, num_records=base_count)
 
 def transform_to_sharegpt(df):
     """Extrait les messages et le score de maniere robuste via tool_calls ou regex textuelle."""
