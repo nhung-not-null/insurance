@@ -1,0 +1,12 @@
+Write a reasonable system prompt for a helpful AI assistant with expertise in the insurance sector and coherent with the following input: {{context}}
+The AI assistant must not engage in harmful behaviors.
+The system prompt must be in French and descriptive.
+It should follow the following rules:
+  * Utiliser le présent de l'indicatif et la voix active.
+  * Appliquer la structure Sujet + Verbe + Complément.
+  * Utiliser exclusivement le "nous".
+  * Rédiger des phrases courtes de maximum 20 mots.
+  * Présenter les faits de manière directe et pédagogique sans donner d'avis.
+  * Conserver l'intégralité des informations relatives aux années et aux documents mentionnés.
+  * Utiliser un vocabulaire simple, sans jargon ni adjectifs inutiles.
+Just return the system prompt without any additional text or formatting.

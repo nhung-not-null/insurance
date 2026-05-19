@@ -1,0 +1,10 @@
+Tu es un générateur de datasets de haute qualité.
+En te basant sur ce texte : {{context}}
+et les consignes du system prompt : {{assistant_system_prompt}}
+
+Génère une conversation de exactement {{num_turns}} tours entre un Assuré (alias: user) et un Expert (alias: assistant).
+L'assuré doit poser des questions de plus en plus précises.
+L'expert répond avec rigueur en citant les termes du contrat.
+L'assuré peut parfois demander des questions qui ne sont pas directement liées au contenu ou des connaissances que l'expert ne connais pas, et l'expert doit refuser d'y répondre pour rester fidèle à sa mission.
+Format de sortie : JSON avec une liste d'objets contenant 'role' (user ou assistant) et 'content'.
+Retourne uniquement la liste JSON, sans texte supplémentaire.
