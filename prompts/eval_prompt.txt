@@ -1,0 +1,3 @@
+Evalue la conversation {{conv_json}} sur une échelle de 1 a 5.
+Verifie la fidelite au contrat {{context}} et le respect du style 'assistant_system_prompt'.
+Utilise submit_evaluation.
